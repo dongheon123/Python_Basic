@@ -42,6 +42,63 @@ print(msg[18:])
 # 역방향 인덱스 ->
 print(msg[-4:])
 
+# 4. 문자열 함수
+str = "Hello World"
+
+print("=" * 100)
+# 4-1. len() : 문자열 길이 계산
+print(len(str))
+
+# 4-2 upper() and lower() : 대소문자 변경
+# - 데이터 전처리 : 1A, 1a -> 1A 통일(upper())
+print(str.upper())
+print(str.lower())
+
+# 4-3.replace( : 문자열 내의 특징 문자 치환
+print(str.replace("H", "J"))
+
+# 4-4.split() : 구분자를 기준으로 문자열 분할 (Default: 공백)
+b = "hello world what a nice weather"
+print(b.split("w"))
+print(b.split())
+
+# 4-5.strip() : 문자열의 좌우 공백을 제거
+id = "               python1004     "
+
+# 4-6. find() and rfind() : 문자열 내부의 특정 문자 위치 인덱스 출력
+print(str.find("o"))  # Hell*o* world
+print(str.rfind("o"))  # Hello w*o*rld
+print(str.find("world"))  # 없으면 -1 출력
+print(str.find("wolrd"))  # 첫 글자의 인덱스 출력
+print(str.find("Wolrd"))  # 첫 글자의 인덱스 출력
+print(str.rfind("wolrd"))  # 첫 글자의 인덱스 출력
+
+# 4-7.in() : 특정 문자열 포함하는 지 확인(True, False 출력)
+print("Hi" in "Hi python")
+
+# 1. "cherry1004@gmail.com"
+# -> id만 추출 "cherry1004"
+id = "job1234@gmail.com"
+# id_2 = "abc@gmail.com"
+# id_3 = "cherry1004@gmail.com"
+val = id[:id.find("@")]
+
+print(val)  # "cherry1004" 출력
+
+# 2.
+# www.naver.com
+# www.daum.net
+# www.google.com
+
+# naver, daum, google만 추출 코드
+url = "www.naver.com"
+start = url.find(".") + 1
+end = url.rfind(".")
+val = url[start:end]
+print(val)  # naver
+
+
+
 
 
 
