@@ -100,6 +100,10 @@ for p in content_list:
     content += p.get_text()
 print(f"본문: {content}")
 
+# homework 
+# 날짜 수집해오기
+reg_data = doc.select("")
+print(f"날짜: {reg_data}")
 
 
 
